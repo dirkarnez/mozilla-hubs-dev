@@ -72,4 +72,4 @@ export initKey=$(base64 -i key.pem | tr -d '\n')
 
 envsubst < "hcce.yam" > "hcce.yaml"
 
-kubectl apply -f hcce.yaml
+minikube kubectl -- apply -f hcce.yaml
